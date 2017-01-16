@@ -28,7 +28,6 @@ html {
 
 .hand {
   width: 14px;
-
   position: absolute;
   right: calc(50% - 7px);
   bottom: 50%;

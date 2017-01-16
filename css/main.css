@@ -2,26 +2,60 @@ html {
   background-color: #000;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+
+}
+
 .clock-face {
   height: 300px;
   margin: 50px auto;
   width: 300px;
 
   background: transparent url("../images/clock-face.svg") no-repeat center center;
+  position: relative;
+
 }
 
 .center {
   width: 28px;
+
+  position: absolute;
+  top: calc(50% - 14px);
+  right: calc(50% - 14px);
+
 }
 
 .hand {
   width: 14px;
+
+  position: absolute;
+  right: calc(50% - 7px);
+  bottom: 50%;
+  transform-origin: bottom;
+
 }
 
 .hand-hour {
+  position: absolute;
+  animation: spin 12s linear infinite;
 
 }
 
 .hand-minute {
+  position: absolute;
+  animation: spin 1s linear infinite;
+
+}
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 
 }
